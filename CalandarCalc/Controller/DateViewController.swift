@@ -11,8 +11,8 @@ class DateViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIPickerView!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var selectionLabel: UILabel!
     @IBOutlet weak var calculateButtonOutlet: UIButton!
+    @IBOutlet weak var toolbar: UIToolbar!
     
     var currentDate = Date()
     var calendarBrain = CalendarBrain()
@@ -43,6 +43,8 @@ class DateViewController: UIViewController {
     }
 }
 
+
+
 //MARK: - UIPickerViewDataSource
 
 extension DateViewController: UIPickerViewDataSource {
@@ -66,6 +68,3 @@ extension DateViewController: UIPickerViewDelegate {
         pickerCountSelected = row + 1
     }
 }
-
-
-
