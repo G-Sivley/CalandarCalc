@@ -40,9 +40,7 @@ class DateViewController: UIViewController {
             let newDate = currentDate.advanced(by: seconds)
             destinationVC.result = calendarBrain.dateFormatter(date: newDate)
         }
-        
     }
-
 }
 
 //MARK: - UIPickerViewDataSource

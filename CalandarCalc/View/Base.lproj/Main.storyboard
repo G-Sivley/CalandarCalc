@@ -20,10 +20,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rjH-HC-PeZ">
-                                <rect key="frame" x="10" y="44" width="394" height="803"/>
+                                <rect key="frame" x="10" y="44" width="394" height="787"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="g4A-ic-vd5">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="401.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="393.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="mK4-Gg-POL">
                                                 <rect key="frame" x="0.0" y="0.0" width="394" height="75"/>
@@ -35,7 +35,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="UiS-NM-99a">
-                                                <rect key="frame" x="0.0" y="90" width="394" height="311.5"/>
+                                                <rect key="frame" x="0.0" y="90" width="394" height="303.5"/>
                                                 <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="40"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -43,19 +43,19 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="niV-9h-rhE">
-                                        <rect key="frame" x="0.0" y="401.5" width="394" height="401.5"/>
+                                        <rect key="frame" x="0.0" y="393.5" width="394" height="393.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of days from today:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="CXH-kP-src">
-                                                <rect key="frame" x="0.0" y="0.0" width="394" height="28.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="28"/>
                                                 <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <pickerView contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="kOe-eh-kNA">
-                                                <rect key="frame" x="0.0" y="28.5" width="394" height="303"/>
+                                                <rect key="frame" x="0.0" y="28" width="394" height="297"/>
                                             </pickerView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MV5-pJ-grz">
-                                                <rect key="frame" x="0.0" y="331.5" width="394" height="70"/>
+                                                <rect key="frame" x="0.0" y="325" width="394" height="68.5"/>
                                                 <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
                                                 <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="32"/>
                                                 <state key="normal" title="Calculate">
@@ -69,18 +69,33 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o5R-SY-xwq">
+                                <rect key="frame" x="0.0" y="841" width="414" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="ZGk-6w-ubf"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Two Date" id="0LM-RB-gme">
+                                        <inset key="landscapeImageInsets" minX="0.0" minY="-4" maxX="0.0" maxY="0.0"/>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="0.61176470589999998" green="0.49803921569999998" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="g8I-jl-rNT" secondAttribute="bottom" id="5er-eH-abm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rjH-HC-PeZ" secondAttribute="trailing" constant="10" id="JOU-5X-IJo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o5R-SY-xwq" secondAttribute="trailing" id="ODB-bN-i3N"/>
                             <constraint firstItem="g8I-jl-rNT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ST2-hd-g8B"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rjH-HC-PeZ" secondAttribute="bottom" constant="15" id="WE1-xu-FpT"/>
+                            <constraint firstItem="o5R-SY-xwq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UT6-f5-fbe"/>
+                            <constraint firstItem="o5R-SY-xwq" firstAttribute="top" secondItem="rjH-HC-PeZ" secondAttribute="bottom" constant="10" id="W3y-hV-PEU"/>
                             <constraint firstItem="rjH-HC-PeZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="izq-d0-xmG"/>
                             <constraint firstItem="rjH-HC-PeZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mCv-mf-IrY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g8I-jl-rNT" secondAttribute="trailing" id="qWS-Us-H2L"/>
                             <constraint firstItem="g8I-jl-rNT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sik-jQ-nFd"/>
+                            <constraint firstAttribute="bottom" secondItem="o5R-SY-xwq" secondAttribute="bottom" id="xaJ-9Y-aD6"/>
                         </constraints>
                     </view>
                     <connections>
