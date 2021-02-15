@@ -27,9 +27,6 @@ class DateViewController: UIViewController {
         calendarBrain.fillPickerCount()
 
         calculateButtonOutlet.layer.cornerRadius = calculateButtonOutlet.frame.height/2
-        
-        
-        
     }
 
     @IBAction func calculateDateButton(_ sender: UIButton) {

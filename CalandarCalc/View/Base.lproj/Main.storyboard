@@ -63,6 +63,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calculateDateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uVP-oM-4n1"/>
+                                                    <segue destination="gba-2t-6wE" kind="presentation" id="4UD-i5-izW"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -93,6 +94,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="88.392857142857139"/>
+        </scene>
+        <!--Results View Controller-->
+        <scene sceneID="aAq-7o-6IA">
+            <objects>
+                <viewController id="gba-2t-6wE" customClass="ResultsViewController" customModule="CalandarCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eec-Ni-fRr">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="kuE-fM-gGY">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgq-Km-nON">
+                                <rect key="frame" x="191" y="357" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="returnButtonPressed:" destination="gba-2t-6wE" eventType="touchUpInside" id="n5x-VU-W5p"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cjG-8M-SUo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kuE-fM-gGY" firstAttribute="top" secondItem="eec-Ni-fRr" secondAttribute="top" id="NbC-7n-nM6"/>
+                            <constraint firstItem="cjG-8M-SUo" firstAttribute="trailing" secondItem="kuE-fM-gGY" secondAttribute="trailing" id="VdG-iV-Tcu"/>
+                            <constraint firstAttribute="bottom" secondItem="kuE-fM-gGY" secondAttribute="bottom" id="Wjo-UA-dET"/>
+                            <constraint firstItem="kuE-fM-gGY" firstAttribute="leading" secondItem="cjG-8M-SUo" secondAttribute="leading" id="zdV-tF-gpU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="returnButton" destination="bgq-Km-nON" id="LK6-TH-J2L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hF8-Uv-GxL" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="747" y="88"/>
         </scene>
     </scenes>
     <resources>

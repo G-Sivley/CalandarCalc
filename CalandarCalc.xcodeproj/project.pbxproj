@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		903909CE25DADED100BABC30 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903909CD25DADED100BABC30 /* ResultsViewController.swift */; };
 		906AF35925D72D2B0076892D /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906AF35825D72D2B0076892D /* K.swift */; };
 		90B7BA7125CB042700348016 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B7BA7025CB042700348016 /* AppDelegate.swift */; };
 		90B7BA7325CB042700348016 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B7BA7225CB042700348016 /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		903909CD25DADED100BABC30 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		906AF35825D72D2B0076892D /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		90B7BA6D25CB042700348016 /* CalandarCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalandarCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90B7BA7025CB042700348016 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				90B7BA7425CB042700348016 /* DateViewController.swift */,
+				903909CD25DADED100BABC30 /* ResultsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				90B7BA7525CB042700348016 /* DateViewController.swift in Sources */,
 				90B7BA8C25CB05BF00348016 /* Colors.swift in Sources */,
 				90B7BA7125CB042700348016 /* AppDelegate.swift in Sources */,
+				903909CE25DADED100BABC30 /* ResultsViewController.swift in Sources */,
 				906AF35925D72D2B0076892D /* K.swift in Sources */,
 				90B7BA8F25CB062600348016 /* CalendarBrain.swift in Sources */,
 				90B7BA7325CB042700348016 /* SceneDelegate.swift in Sources */,
