@@ -16,8 +16,9 @@ struct CalendarBrain {
     
     func dateFormatter(date: Date) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
+        dateFormatter.dateStyle = .full
         dateFormatter.timeStyle = .none
+        
         
         // US English Locale (en_US)
         dateFormatter.locale = Locale(identifier: "en_US")
