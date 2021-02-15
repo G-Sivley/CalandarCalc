@@ -34,8 +34,6 @@ class DateViewController: UIViewController {
         let seconds = calendarBrain.calculateSecondsFromDays(Days: Double(pickerCountSelected))
         let newDate = currentDate.advanced(by: seconds)
         dateLabel.text = calendarBrain.dateFormatter(date: newDate)
-        selectionLabel.text = "Calculated Date"
-            
     }
     
 }

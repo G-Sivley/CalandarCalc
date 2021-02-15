@@ -10,14 +10,21 @@ import UIKit
 class ResultsViewController: UIViewController {
    
     @IBOutlet weak var returnButton: UIButton!
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    var calendarBrain = CalendarBrain()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    
+        
+        returnButton.layer.cornerRadius = returnButton.frame.height/2
+        
     }
     
 
     @IBAction func returnButtonPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     
     
