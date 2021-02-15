@@ -16,10 +16,9 @@ struct CalendarBrain {
     
     func dateFormatter(date: Date) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .full
-        dateFormatter.timeStyle = .none
-        
-        
+        let template = "EE, MMM d, yyyy" // Mon, Feb 15, 2021
+        dateFormatter.setLocalizedDateFormatFromTemplate(template)
+
         // US English Locale (en_US)
         dateFormatter.locale = Locale(identifier: "en_US")
         return "\(dateFormatter.string(from: date))"
