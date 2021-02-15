@@ -17,7 +17,7 @@ class DateViewController: UIViewController {
     var currentDate = Date()
     var calendarBrain = CalendarBrain()
     var pickerCountSelected = 0
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,14 +30,19 @@ class DateViewController: UIViewController {
     }
 
     @IBAction func calculateDateButton(_ sender: UIButton) {
-        
-        let seconds = calendarBrain.calculateSecondsFromDays(Days: Double(pickerCountSelected))
-        let newDate = currentDate.advanced(by: seconds)
-        dateLabel.text = calendarBrain.dateFormatter(date: newDate)
-        selectionLabel.text = "Calculated Date"
-            
+        performSegue(withIdentifier: K.resultSegue, sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.resultSegue {
+            let destinationVC = segue.destination as! ResultsViewController
+            let seconds = calendarBrain.calculateSecondsFromDays(Days: Double(pickerCountSelected))
+            let newDate = currentDate.advanced(by: seconds)
+            destinationVC.result = calendarBrain.dateFormatter(date: newDate)
+        }
+        
+    }
+
 }
 
 //MARK: - UIPickerViewDataSource
