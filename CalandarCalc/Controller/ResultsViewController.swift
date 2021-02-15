@@ -9,6 +9,8 @@ import UIKit
 
 class ResultsViewController: UIViewController {
    
+    var result: String = ""
+    
     @IBOutlet weak var returnButton: UIButton!
     @IBOutlet weak var dateLabel: UILabel!
     
@@ -19,7 +21,7 @@ class ResultsViewController: UIViewController {
         super.viewDidLoad()
         
         returnButton.layer.cornerRadius = returnButton.frame.height/2
-        
+        dateLabel.text = result
     }
     
 

@@ -63,7 +63,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calculateDateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uVP-oM-4n1"/>
-                                                    <segue destination="gba-2t-6wE" kind="presentation" id="4UD-i5-izW"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -89,6 +88,7 @@
                         <outlet property="dateLabel" destination="UiS-NM-99a" id="wQg-fq-HgR"/>
                         <outlet property="datePicker" destination="kOe-eh-kNA" id="6a0-Z8-V8Z"/>
                         <outlet property="selectionLabel" destination="mK4-Gg-POL" id="3DM-Kh-MY8"/>
+                        <segue destination="gba-2t-6wE" kind="show" identifier="goToResult" id="PX0-sT-lvK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -164,6 +164,7 @@
                             <constraint firstItem="kuE-fM-gGY" firstAttribute="leading" secondItem="cjG-8M-SUo" secondAttribute="leading" id="zdV-tF-gpU"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ABe-fc-sLN"/>
                     <connections>
                         <outlet property="dateLabel" destination="nuz-To-pcU" id="hQF-xZ-khv"/>
                         <outlet property="returnButton" destination="Q6n-ur-64O" id="aHK-nk-rhe"/>
