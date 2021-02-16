@@ -20,7 +20,10 @@ class ResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // button look
         returnButton.layer.cornerRadius = returnButton.frame.height/2
+        
+        // presents the results everytime the view is loaded.
         dateLabel.text = result
     }
     
