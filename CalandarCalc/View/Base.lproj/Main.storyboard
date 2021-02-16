@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="juX-xY-peR">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Date View Controller-->
+        <!--Today-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="DateViewController" customModule="CalandarCalc" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,10 +20,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rjH-HC-PeZ">
-                                <rect key="frame" x="10" y="44" width="394" height="803"/>
+                                <rect key="frame" x="10" y="44" width="394" height="754"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="g4A-ic-vd5">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="401.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="377"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="mK4-Gg-POL">
                                                 <rect key="frame" x="0.0" y="0.0" width="394" height="75"/>
@@ -35,7 +35,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="UiS-NM-99a">
-                                                <rect key="frame" x="0.0" y="90" width="394" height="311.5"/>
+                                                <rect key="frame" x="0.0" y="90" width="394" height="287"/>
                                                 <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="40"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -43,19 +43,19 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="niV-9h-rhE">
-                                        <rect key="frame" x="0.0" y="401.5" width="394" height="401.5"/>
+                                        <rect key="frame" x="0.0" y="377" width="394" height="377"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of days from today:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="CXH-kP-src">
-                                                <rect key="frame" x="0.0" y="0.0" width="394" height="28.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="27"/>
                                                 <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <pickerView contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="kOe-eh-kNA">
-                                                <rect key="frame" x="0.0" y="28.5" width="394" height="303"/>
+                                                <rect key="frame" x="0.0" y="27" width="394" height="284"/>
                                             </pickerView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MV5-pJ-grz">
-                                                <rect key="frame" x="0.0" y="331.5" width="394" height="70"/>
+                                                <rect key="frame" x="0.0" y="311" width="394" height="66"/>
                                                 <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
                                                 <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="32"/>
                                                 <state key="normal" title="Calculate">
@@ -83,6 +83,7 @@
                             <constraint firstItem="g8I-jl-rNT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sik-jQ-nFd"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Today" image="clock" catalog="system" id="W6J-JZ-cls"/>
                     <connections>
                         <outlet property="calculateButtonOutlet" destination="MV5-pJ-grz" id="j7T-Vc-XHs"/>
                         <outlet property="dateLabel" destination="UiS-NM-99a" id="wQg-fq-HgR"/>
@@ -93,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="88.392857142857139"/>
+            <point key="canvasLocation" x="928.98550724637687" y="88.392857142857139"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="aAq-7o-6IA">
@@ -118,7 +119,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="nuz-To-pcU">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="nuz-To-pcU">
                                                 <rect key="frame" x="0.0" y="397" width="394" height="321"/>
                                                 <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="40"/>
                                                 <nil key="textColor"/>
@@ -172,10 +173,114 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hF8-Uv-GxL" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="747" y="88"/>
+            <point key="canvasLocation" x="1874" y="88"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="DQb-G9-r3l">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="juX-xY-peR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X4w-jt-Ebu">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="JhG-LU-TxN"/>
+                        <segue destination="S8J-xe-8JF" kind="relationship" relationship="viewControllers" id="6QX-pY-47c"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HhT-WP-G20" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="88.392857142857139"/>
+        </scene>
+        <!--Custom-->
+        <scene sceneID="VGD-ib-jzI">
+            <objects>
+                <viewController id="S8J-xe-8JF" customClass="CustomDateViewController" customModule="CalandarCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nV8-GR-DWp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="6Hy-uL-he9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="CaU-Nd-mis">
+                                <rect key="frame" x="10" y="44" width="394" height="754"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="M7n-1P-cXK">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="wEM-16-Oor"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MyanmarSangamMN-Bold" family="Myanmar Sangam MN" pointSize="45"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days Between" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="4we-NC-sGK">
+                                        <rect key="frame" x="0.0" y="75" width="394" height="55.5"/>
+                                        <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="twQ-Uc-0TV">
+                                        <rect key="frame" x="0.0" y="130.5" width="394" height="251"/>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="And" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="FON-Bn-ACW">
+                                        <rect key="frame" x="0.0" y="381.5" width="394" height="55.5"/>
+                                        <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="IvH-Df-YDS">
+                                        <rect key="frame" x="0.0" y="437" width="394" height="251"/>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Dp-E8-1Ro">
+                                        <rect key="frame" x="0.0" y="688" width="394" height="66"/>
+                                        <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                        <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="32"/>
+                                        <state key="normal" title="Calculate">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="calculateDateButton:" destination="S8J-xe-8JF" eventType="touchUpInside" id="Ghs-SF-ga5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vPn-X1-fsP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Hy-uL-he9" firstAttribute="top" secondItem="nV8-GR-DWp" secondAttribute="top" id="6eI-8G-a5F"/>
+                            <constraint firstItem="CaU-Nd-mis" firstAttribute="leading" secondItem="vPn-X1-fsP" secondAttribute="leading" constant="10" id="HaF-mA-z3o"/>
+                            <constraint firstItem="vPn-X1-fsP" firstAttribute="trailing" secondItem="CaU-Nd-mis" secondAttribute="trailing" constant="10" id="QBn-OC-QMq"/>
+                            <constraint firstAttribute="bottom" secondItem="6Hy-uL-he9" secondAttribute="bottom" id="WgP-dZ-DPC"/>
+                            <constraint firstItem="vPn-X1-fsP" firstAttribute="trailing" secondItem="6Hy-uL-he9" secondAttribute="trailing" id="dc5-eI-TfA"/>
+                            <constraint firstItem="vPn-X1-fsP" firstAttribute="bottom" secondItem="CaU-Nd-mis" secondAttribute="bottom" constant="15" id="fOK-Os-4G8"/>
+                            <constraint firstItem="CaU-Nd-mis" firstAttribute="top" secondItem="vPn-X1-fsP" secondAttribute="top" id="t6K-0R-rys"/>
+                            <constraint firstItem="6Hy-uL-he9" firstAttribute="leading" secondItem="vPn-X1-fsP" secondAttribute="leading" id="xfp-km-xK8"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Custom" image="calendar" catalog="system" id="qHg-rz-hqy"/>
+                    <connections>
+                        <outlet property="calculateDateButton" destination="2Dp-E8-1Ro" id="EXx-QQ-Mw7"/>
+                        <outlet property="dayOnePicker" destination="twQ-Uc-0TV" id="QUH-pi-HzD"/>
+                        <outlet property="dayTwoPicker" destination="IvH-Df-YDS" id="X7c-Fg-SrM"/>
+                        <segue destination="gba-2t-6wE" kind="show" identifier="goToResult" id="BWH-Qg-DBV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RjK-yA-HO0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="796"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="BWH-Qg-DBV"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="clock" catalog="system" width="128" height="121"/>
         <image name="screenBackground" width="360" height="640"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

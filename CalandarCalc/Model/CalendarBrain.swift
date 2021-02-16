@@ -14,6 +14,11 @@ struct CalendarBrain {
         return Days * K.secondsInADay
     }
     
+    // the reverse of the previous function; get days from seconds by dividing by seconds in a day
+    func calculateDaysFromSeconds(Seconds: Int) -> Int {
+        return Seconds / Int(K.secondsInADay)
+    }
+    
     func dateFormatter(date: Date) -> String {
         let dateFormatter = DateFormatter()
         let template = "EE, MMM d, yyyy" // Mon, Feb 15, 2021
