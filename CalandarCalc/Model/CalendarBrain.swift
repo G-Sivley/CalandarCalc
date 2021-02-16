@@ -10,6 +10,7 @@ import UIKit
 struct CalendarBrain {
     var pickerCount: [String] = []
     
+    // calculates how many seconds from days
     func calculateSecondsFromDays(Days: Double) -> Double {
         return Days * K.secondsInADay
     }
@@ -19,6 +20,7 @@ struct CalendarBrain {
         return Seconds / Int(K.secondsInADay)
     }
     
+    // formats the date in a string as seen in the comment below
     func dateFormatter(date: Date) -> String {
         let dateFormatter = DateFormatter()
         let template = "EE, MMM d, yyyy" // Mon, Feb 15, 2021
@@ -29,8 +31,9 @@ struct CalendarBrain {
         return "\(dateFormatter.string(from: date))"
     }
     
+    // makes list for picker on the DateView. This shows 365 possible days away.
     mutating func fillPickerCount() {
-        for number in 1...365 {
+        for number in 1...K.pickerRows {
             pickerCount.append("\(number)")
         }
     }

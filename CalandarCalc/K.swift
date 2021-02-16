@@ -18,4 +18,6 @@ struct K {
         Colors(colors: #colorLiteral(red: 0.6784313725, green: 0.3882352941, blue: 0.3490196078, alpha: 1))
     ]
     static let resultSegue = "goToResult"
+    
+    static let pickerRows = 365
 }
