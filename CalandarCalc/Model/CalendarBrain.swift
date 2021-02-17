@@ -20,6 +20,11 @@ struct CalendarBrain {
         return Seconds / Int(K.secondsInADay)
     }
     
+    // takes a time interval and turns it into formatted hours minutes and seconds
+    func secondsToHoursMinutesSeconds (seconds : Int) -> (Int, Int, Int) {
+      return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
+    }
+    
     // formats the date in a string as seen in the comment below
     func dateFormatter(date: Date) -> String {
         let dateFormatter = DateFormatter()
