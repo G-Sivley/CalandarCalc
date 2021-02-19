@@ -26,11 +26,12 @@ struct CalendarBrain {
         formatter.allowedUnits = [.hour, .minute]
         formatter.unitsStyle = .full
         
-        // should probably do something to make this for all minutes even above one minute
+        // bug that the interval would be at 59 and be a minute less
         var interval = seconds
-        if interval < 60 {
-            interval = 60
+        if interval % 60 != 0 {
+            interval += 1
         }
+    
         let formattedString = formatter.string(from: TimeInterval(interval))!
         
         return formattedString
