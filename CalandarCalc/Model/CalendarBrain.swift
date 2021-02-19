@@ -20,6 +20,24 @@ struct CalendarBrain {
         return Seconds / Int(K.secondsInADay)
     }
     
+    // takes a time interval and turns it into formatted hours minutes and seconds
+    func secondsToHoursMinutesSeconds (seconds : Int) -> String {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.hour, .minute]
+        formatter.unitsStyle = .full
+        
+        // should probably do something to make this for all minutes even above one minute
+        var interval = seconds
+        if interval < 60 {
+            interval = 60
+        }
+        let formattedString = formatter.string(from: TimeInterval(interval))!
+        
+        return formattedString
+        
+        
+    }
+    
     // formats the date in a string as seen in the comment below
     func dateFormatter(date: Date) -> String {
         let dateFormatter = DateFormatter()

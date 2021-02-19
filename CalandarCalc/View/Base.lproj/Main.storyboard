@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="juX-xY-peR">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,25 +7,110 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Time-->
+        <scene sceneID="98X-84-beU">
+            <objects>
+                <viewController id="TWZ-sH-QgN" customClass="TimeViewController" customModule="CalandarCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="av0-gN-Tq9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="EvJ-ec-8dU">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XTW-f5-sVz">
+                                <rect key="frame" x="10" y="0.0" width="580" height="536"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6C4-3n-WF7">
+                                        <rect key="frame" x="0.0" y="0.0" width="580" height="536"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Between" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="uFO-c7-VTB">
+                                                <rect key="frame" x="0.0" y="0.0" width="580" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="lR2-It-VF2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MyanmarSangamMN-Bold" family="Myanmar Sangam MN" pointSize="45"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="eDS-nb-ftx">
+                                                <rect key="frame" x="0.0" y="90" width="580" height="44"/>
+                                            </datePicker>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="248" ambiguous="YES" text="And" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="KhH-bZ-uE1">
+                                                <rect key="frame" x="0.0" y="149" width="580" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="d8S-1I-726"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MyanmarSangamMN-Bold" family="Myanmar Sangam MN" pointSize="45"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" verticalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="15r-A9-KdJ">
+                                                <rect key="frame" x="0.0" y="239" width="580" height="216"/>
+                                            </datePicker>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVb-gs-4fL">
+                                                <rect key="frame" x="0.0" y="470" width="580" height="66"/>
+                                                <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="66" id="bfk-cc-Jaw"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="32"/>
+                                                <state key="normal" title="Calculate">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="calculatePushed:" destination="TWZ-sH-QgN" eventType="touchUpInside" id="fyb-39-hIB"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6EB-7W-1Ce"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XTW-f5-sVz" firstAttribute="top" secondItem="6EB-7W-1Ce" secondAttribute="top" id="9hp-jP-4BY"/>
+                            <constraint firstItem="XTW-f5-sVz" firstAttribute="leading" secondItem="6EB-7W-1Ce" secondAttribute="leading" constant="10" id="Liq-FQ-GMk"/>
+                            <constraint firstItem="6EB-7W-1Ce" firstAttribute="trailing" secondItem="EvJ-ec-8dU" secondAttribute="trailing" id="MKu-6H-Ya0"/>
+                            <constraint firstItem="6EB-7W-1Ce" firstAttribute="trailing" secondItem="XTW-f5-sVz" secondAttribute="trailing" constant="10" id="Oed-kg-aXT"/>
+                            <constraint firstItem="6EB-7W-1Ce" firstAttribute="bottom" secondItem="XTW-f5-sVz" secondAttribute="bottom" constant="15" id="WPA-dQ-jKq"/>
+                            <constraint firstItem="EvJ-ec-8dU" firstAttribute="leading" secondItem="6EB-7W-1Ce" secondAttribute="leading" id="XB8-6J-b2U"/>
+                            <constraint firstItem="EvJ-ec-8dU" firstAttribute="top" secondItem="av0-gN-Tq9" secondAttribute="top" id="bPK-xM-efI"/>
+                            <constraint firstAttribute="bottom" secondItem="EvJ-ec-8dU" secondAttribute="bottom" id="p5q-FG-tBe"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Time" image="timer" catalog="system" id="TDs-GE-o5b"/>
+                    <connections>
+                        <outlet property="calculateTimeButton" destination="iVb-gs-4fL" id="4Bt-pG-FMR"/>
+                        <outlet property="timeOnePicker" destination="eDS-nb-ftx" id="me0-BP-rop"/>
+                        <outlet property="timeTwoPicker" destination="15r-A9-KdJ" id="fPg-ri-ax9"/>
+                        <segue destination="gba-2t-6wE" kind="show" identifier="goToResult" id="WZe-WP-dUI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ncv-aM-toX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="-651"/>
+        </scene>
         <!--Today-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="DateViewController" customModule="CalandarCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="g8I-jl-rNT">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rjH-HC-PeZ">
-                                <rect key="frame" x="10" y="44" width="394" height="754"/>
+                                <rect key="frame" x="10" y="0.0" width="580" height="536"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="g4A-ic-vd5">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="377"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="580" height="268"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="mK4-Gg-POL">
-                                                <rect key="frame" x="0.0" y="0.0" width="394" height="75"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="580" height="75"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="75" id="rpx-YR-8YC"/>
                                                 </constraints>
@@ -35,7 +119,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="UiS-NM-99a">
-                                                <rect key="frame" x="0.0" y="90" width="394" height="287"/>
+                                                <rect key="frame" x="0.0" y="90" width="580" height="178"/>
                                                 <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="40"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -43,20 +127,23 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="niV-9h-rhE">
-                                        <rect key="frame" x="0.0" y="377" width="394" height="377"/>
+                                        <rect key="frame" x="0.0" y="268" width="580" height="268"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of days from today:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="CXH-kP-src">
-                                                <rect key="frame" x="0.0" y="0.0" width="394" height="27"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="580" height="19"/>
                                                 <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <pickerView contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="kOe-eh-kNA">
-                                                <rect key="frame" x="0.0" y="27" width="394" height="284"/>
+                                                <rect key="frame" x="0.0" y="19" width="580" height="183"/>
                                             </pickerView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MV5-pJ-grz">
-                                                <rect key="frame" x="0.0" y="311" width="394" height="66"/>
+                                                <rect key="frame" x="0.0" y="202" width="580" height="66"/>
                                                 <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="66" id="hVS-Ml-vqM"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="32"/>
                                                 <state key="normal" title="Calculate">
                                                     <color key="titleColor" systemColor="labelColor"/>
@@ -101,26 +188,26 @@
             <objects>
                 <viewController id="gba-2t-6wE" customClass="ResultsViewController" customModule="CalandarCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eec-Ni-fRr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="kuE-fM-gGY">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="lQq-We-hLO">
-                                <rect key="frame" x="10" y="5" width="394" height="793"/>
+                                <rect key="frame" x="10" y="5" width="580" height="565"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nAL-vi-9gM">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="718"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="580" height="490"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculated Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="wX7-49-OFX">
-                                                <rect key="frame" x="0.0" y="0.0" width="394" height="382"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="580" height="260.5"/>
                                                 <fontDescription key="fontDescription" name="MyanmarSangamMN-Bold" family="Myanmar Sangam MN" pointSize="45"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="nuz-To-pcU">
-                                                <rect key="frame" x="0.0" y="397" width="394" height="321"/>
+                                                <rect key="frame" x="0.0" y="275.5" width="580" height="214.5"/>
                                                 <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="40"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -128,7 +215,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6n-ur-64O">
-                                        <rect key="frame" x="0.0" y="718" width="394" height="75"/>
+                                        <rect key="frame" x="0.0" y="490" width="580" height="75"/>
                                         <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="x8L-FA-2Tp"/>
@@ -189,6 +276,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="JhG-LU-TxN"/>
                         <segue destination="S8J-xe-8JF" kind="relationship" relationship="viewControllers" id="6QX-pY-47c"/>
+                        <segue destination="TWZ-sH-QgN" kind="relationship" relationship="viewControllers" id="Rzn-C6-Pum"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HhT-WP-G20" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -200,17 +288,17 @@
             <objects>
                 <viewController id="S8J-xe-8JF" customClass="CustomDateViewController" customModule="CalandarCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nV8-GR-DWp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="6Hy-uL-he9">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="CaU-Nd-mis">
-                                <rect key="frame" x="10" y="44" width="394" height="754"/>
+                                <rect key="frame" x="10" y="0.0" width="580" height="536"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="M7n-1P-cXK">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="75"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="580" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="wEM-16-Oor"/>
                                         </constraints>
@@ -219,26 +307,29 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days Between" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="4we-NC-sGK">
-                                        <rect key="frame" x="0.0" y="75" width="394" height="55.5"/>
+                                        <rect key="frame" x="0.0" y="75" width="580" height="39.5"/>
                                         <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="twQ-Uc-0TV">
-                                        <rect key="frame" x="0.0" y="130.5" width="394" height="251"/>
+                                        <rect key="frame" x="0.0" y="114.5" width="580" height="178.5"/>
                                     </datePicker>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="And" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="FON-Bn-ACW">
-                                        <rect key="frame" x="0.0" y="381.5" width="394" height="55.5"/>
+                                        <rect key="frame" x="0.0" y="293" width="580" height="39"/>
                                         <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="IvH-Df-YDS">
-                                        <rect key="frame" x="0.0" y="437" width="394" height="251"/>
+                                        <rect key="frame" x="0.0" y="332" width="580" height="138"/>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Dp-E8-1Ro">
-                                        <rect key="frame" x="0.0" y="688" width="394" height="66"/>
+                                        <rect key="frame" x="0.0" y="470" width="580" height="66"/>
                                         <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="66" id="Vw3-3h-r3Y"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="32"/>
                                         <state key="normal" title="Calculate">
                                             <color key="titleColor" systemColor="labelColor"/>
@@ -277,12 +368,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="BWH-Qg-DBV"/>
+        <segue reference="WZe-WP-dUI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="screenBackground" width="360" height="640"/>
+        <image name="timer" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
