@@ -42,7 +42,7 @@ class TimeViewController: UIViewController {
             let timeTwo = timeTwoPicker.date
             
             let secondsBetween = Int(abs(timeTwo.timeIntervalSince(timeOne).rounded()))
-            print(calendarBrain.secondsToHoursMinutesSeconds(seconds: secondsBetween))
+            destinationVC.result = calendarBrain.secondsToHoursMinutesSeconds(seconds: secondsBetween)
             
         }
     }
